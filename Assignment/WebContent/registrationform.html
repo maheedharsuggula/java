@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function validate()                                    
+{ 
+    var fname = document.forms["registration"]["ufname"];
+    var mname = document.forms["registration"]["umname"]; 
+    var lname = document.forms["registration"]["ulname"]; 
+    var password = document.forms["registration"]["upwd"];
+    var cpassword = document.forms["registration"]["cupwd"];
+    var email = document.forms["registration"]["uemail"]; 
+    var phone = document.forms["registration"]["umobile"];
+    
+    
+    if (fname.value == "")                                  
+    { 
+        window.alert("Please enter your First Name."); 
+        name.focus(); 
+        return false; 
+    } 
+    
+    if (lname.value == "")                                  
+    { 
+        window.alert("Please enter your Last Name."); 
+        name.focus(); 
+        return false; 
+    } 
+    
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    }  
+    
+    if (cpassword.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        cpassword.focus(); 
+        return false; 
+    }  
+    
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    }
+    
+    if (phone.value == "")                           
+    { 
+        window.alert("Please enter your telephone number."); 
+        phone.focus(); 
+        return false; 
+    } 
+    
+    return true;
+}
+</script> 
+
+</head>
+<body bgcolor="lightblue">
+<br><br>
+<form method="POST" action="loginform.html" onsubmit="return validate()" name ="registration" >
+<center>
+<table>
+<tr>
+<td>First Name</td>
+<td><input type="text" name="ufname"/></td>
+</tr>
+<tr>
+<td>Middle Name</td>
+<td><input type="text" name="umname"/></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><input type="text" name="ulname"/></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="upwd"/></td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type="password" name="cupwd"/></td>
+</tr>
+<tr>
+<td>User Email Id</td>
+<td><input type="text" name="uemail"/></td>
+</tr>
+<tr>
+<td>User Mobile No</td>
+<td><input type="text" name="umobile"/></td>
+</tr>
+<tr>
+<td><input type="submit" value="Registration"/></td>
+</tr>
+</table>
+</center>
+</form>
+</body>
+</html>
+
+
